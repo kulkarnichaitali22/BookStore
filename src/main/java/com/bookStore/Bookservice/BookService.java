@@ -14,12 +14,29 @@ public class BookService {
 	@Autowired
 	BookDao dao;
 	
-	public Book addBook(Book book) {
+	public Book addBook(Book book) 
+	{
 		return dao.addBook(book);
 	}
 	
-	public List<Book> getAllBooks(){
+	public List<Book> getAllBooks()
+	{
 		return dao.getAllBooks();
+	}
+	
+	public Book getBookById(long bookId) 
+	{
+		return dao.getBookById(bookId);
+	}
+	
+	public Book updateBook(Book book)
+	{
+		return dao.updateBook(book);
+	}
+	
+	public void deleteBook(long bookId)
+	{
+		dao.deleteBookById(bookId);
 	}
 
 }
